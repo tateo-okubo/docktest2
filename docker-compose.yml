@@ -9,4 +9,5 @@ services:
       - ./:/docs
     # command: sh pip install mkdocs-markdownextradata-plugin
     # command: echo "test"
+    tty: true
     entrypoint: /bin/sh /docs/entrypoint.sh
