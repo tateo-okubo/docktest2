@@ -1,0 +1,108 @@
+site_name: "iOS adstir AdMob integration"
+theme:
+  name: 'material'
+  language: 'ja'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+# 検索機能の設定
+extra:
+  search:
+    language: 'jp'
+  version: 1.0.0
+
+# CSSの設定
+extra_css:
+  - css/tabs.css
+
+# 拡張機能の設定
+markdown_extensions:
+  - admonition # 警告文出せるやつ
+  - footnotes
+  # - markdown_fenced_code_tabs
+  - pymdownx.superfences
+  - codehilite:
+      linenums: false
+  - toc:
+      slugify: !!python/name:pymdownx.slugs.uslugify
+      permalink: true
+      anchorlink: true
+  - pymdownx.tasklist:  
+      custom_checkbox: true
+
+nav:
+  - スタートガイド: index.md
+  - adstir: 
+      - はじめに: adstir/index.md
+      - 初期設定: 
+        - SDKの組み込み:
+          - CocoaPods: adstir/init/cocoapods.md
+          - 手動組み込み: adstir/init/manual_integration.md
+      - 対応ネットワーク: 
+        - 対応ネットワーク一覧: adstir/network/index.md
+        - AdColony: adstir/network/adcolony.md
+        - AdCorsa: adstir/network/adcorsa.md
+        - AppLovin: adstir/network/applovin.md
+        - imobile: adstir/network/imobile.md
+        - maio: adstir/network/maio.md
+        - Mobvista: adstir/network/mobvista.md
+        - MoPub: adstir/network/mopub.md
+        - nend: adstir/network/nend.md
+        - TapJoy: adstir/network/tapjoy.md
+        - TikTok: adstir/network/tiktok.md
+        - UnityAds: adstir/network/unityads.md
+        - Zucks: adstir/network/zucks.md
+
+      - 広告の実装:
+        - バナー: adstir/ad/banner.md
+        - スワイプインタースティシャル: adstir/ad/swipe.md
+        - ネイティブ: 
+          - ネイティブライクバナー: adstir/ad/native/native_banner.md
+          - フルカスタマイズ: adstir/ad/native/custom.md
+          - ネイティブ動画: adstir/ad/native/native_video.md
+        - 動画リワード: 
+          - 実装: adstir/ad/vr/index.md
+          - リワードコールバック: adstir/ad/vr/callback.md
+        - 全画面インタースティシャル: adstir/ad/interstitial.md
+      - APIリファレンス: 
+        - 一覧: adstir/api/index.md
+        - バナー:
+          - AdstirMraidView: adstir/api/banner/AdstirMraidView-Class-Reference.md
+          - AdstirMraidViewDelegate: adstir/api/banner/AdstirMraidViewDelegate-Protocol-Reference.md
+        - スワイプインタースティシャル:
+          - AdstirFullscreenView: adstir/api/swipe/AdstirFullscreenView-Class-Reference.md
+        - ネイティブ:
+          - AdstirNativeAd: adstir/api/native/AdstirNativeAd-Class-Reference.md
+          - AdstirNativeAdDelegate: adstir/api/native/AdstirNativeAdDelegate-Protocol-Reference.md
+          - AdstirNativeAdResponse: adstir/api/native/AdstirNativeAdResponse-Class-Reference.md
+          - AdstirLoadImageDeledate: adstir/api/native/AdstirLoadImageDeledate-Protocol-Reference.md
+          - AdstirLoadSmallImageDeledate: adstir/api/native/AdstirLoadSmallImageDeledate-Protocol-Reference.md
+          - ネイティブ動画:
+            - AdstirNativeVideoAd: adstir/api/native/video/AdstirNativeVideoAd-Class-Reference.md
+            - AdstirNativeVideoView: adstir/api/native/video/AdstirNativeVideoView-Class-Reference.md
+            - AdstirNativeVideoViewDelegate: adstir/api/native/video/AdstirNativeVideoViewDelegate-Protocol-Reference.md
+        - 動画リワード/全画面インタースティシャルの初期化:
+          - AdstirVideoAds: adstir/api/AdstirVideoAds-Class-Reference.md
+        - 動画リワード:
+          - AdstirVideoReward: adstir/api/video/AdstirVideoReward-Class-Reference.md
+          - AdstirVideoRewardDelegate: adstir/api/video/AdstirVideoRewardDelegate-Protocol-Reference.md
+        - 全画面インタースティシャル:
+          - AdstirInterstitial: adstir/api/interstitial/AdstirInterstitial-Class-Reference.md
+          - AdstirInterstitialDelegate: adstir/api/interstitial/AdstirInterstitialDelegate-Protocol-Reference.md
+      - その他:
+          - ユーザデータアクセス許可に関して: adstir/info/user_data.md 
+          - よくある質問: adstir/info/question.md
+  - AdMob: 
+      - はじめに: admob/index.md
+      - AdMobメディエーション: admob/network.md
+      - よくある質問: admob/question.md
+  - APS: 
+      - APSの初期設定: aps/init.md
+      - AdMobバナー: aps/banner.md
+      - AdMobインタースティシャル: aps/interstitial.md
+  - 変更履歴: changelog.md
+
