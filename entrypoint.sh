@@ -1,0 +1,7 @@
+#!/bin/sh
+
+pip install -r requirements.txt
+
+echo "====== end pip install ======"
+
+mkdocs serve --dev-addr=0.0.0.0:8000

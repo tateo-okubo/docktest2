@@ -7,5 +7,6 @@ services:
       - "8000:8000"
     volumes:
       - ./:/docs
-      - ~/.ssh/config:/root/.ssh/config
-      - ~/.ssh/github_rsa:/root/.ssh/github_rsa
+    # command: sh pip install mkdocs-markdownextradata-plugin
+    # command: echo "test"
+    entrypoint: /bin/sh /docs/entrypoint.sh
