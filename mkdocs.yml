@@ -1,38 +1,60 @@
-site_name: "iOS adstir AdMob integration"
+site_name: "adstir Integration Guide for iOS"
 theme:
   name: 'material'
   language: 'ja'
   palette:
-    primary: 'indigo'
-    accent: 'indigo'
+    primary: 'white'
+    accent: 'white'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
+  feature:
+    tabs: true
+  custom_dir: 'custom_dir'
+  logo: 'images/adstir_icon.ico'
 
 # 検索機能の設定
 extra:
   search:
     language: 'jp'
-  version: 1.0.0
+  config:
+    version:
+      adstir: 2.14.7
+      adcolony: 4.1.2
+      adcorsa: 2.1.0
+      applovin: 6.10.1
+      facebook: 5.6.0
+      imobile: 2.0.20
+      maio: 1.5.1
+      mobvista: 10.1.71
+      mopub: 5.10.0
+      nend: 5.3.0
+      tapjoy: 12.3.4
+      tiktok: 2.4.6.7
+      unityads: 3.3.0
+      zucks: 4.6.1
+      facebook: 5.6.0
+    sample_url: 'https://dl.ad-stir.com/sample/AdstirAdsSdkiOS-2.14.6-SampleApp.zip'
 
 # CSSの設定
 extra_css:
-  - css/tabs.css
+  - css/custom.css
 
 # 拡張機能の設定
 markdown_extensions:
   - admonition # 警告文出せるやつ
   - footnotes
-  # - markdown_fenced_code_tabs
   - pymdownx.superfences
   - codehilite:
       linenums: false
+  - meta
   - toc:
       slugify: !!python/name:pymdownx.slugs.uslugify
       permalink: true
       anchorlink: true
   - pymdownx.tasklist:  
       custom_checkbox: true
+  - pymdownx.details
 
 nav:
   - スタートガイド: index.md
@@ -105,4 +127,9 @@ nav:
       - AdMobバナー: aps/banner.md
       - AdMobインタースティシャル: aps/interstitial.md
   - 変更履歴: changelog.md
+
+plugins:
+  - search
+  - markdownextradata: {}
+
 

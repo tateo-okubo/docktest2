@@ -1,0 +1,57 @@
+.codehilite .hll, .md-typeset .highlight .hll {
+    display: block;
+    margin: 0 -.6rem;
+    padding: 0 .6rem;
+    opacity: 0.5;
+    background-color:rgba(0, 0, 0, 0);
+}
+
+.md-tabs {
+    border-bottom: .05rem solid rgba(0,0,0,.07) !important;
+    background-color: #ef5350 !important;
+    color: hsl(0, 0%, 100%) !important;
+}
+
+.md-content {
+  background: white;
+}
+
+.md-nav--secondary {
+  margin-left: 1rem;
+  border-left: solid 3px #ef5350;
+}
+
+
+@media only screen and (min-width: 100em) {
+
+  .md-grid {
+    max-width: 70rem;
+
+  }
+
+  .md-content {
+      margin-left: 13.1rem;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+  }
+
+  .md-sidebar--secondary {
+      margin-left: 70rem;
+    }
+
+    .md-sidebar--primary {
+      border-right: solid 1px lightgray;
+  }
+
+  .md-sidebar--primary {
+      padding-top: 0;
+  }
+
+  .md-nav--primary {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      background: white;
+  }
+}

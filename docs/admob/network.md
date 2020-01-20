@@ -4,14 +4,14 @@ adstirのAdMobパッケージには下記のアドネットワークのSDKがパ
 
 アドネットワーク|SDKバージョン|バナー|インタースティシャル|動画リワード|動画リワード(新API)|ネイティブ
 ---| :-: |:-:|:-:|:-:|:-:|:-:
-AdColony|4.1.2| o | o | o | o | -
-AppLovin|6.10.1| o | o | o | o | o
-Facebook|5.6.0| o | o | o | o | o
-maio    |1.5.1| - | o | o | o | -
-MoPub   |5.10.0| o | o | o | o | o
-nend    |5.3.0| o | o | o | o | - 
-TapJoy  |12.3.4| - | o | o | o | - 
-UnityAds|3.3.0| o | o | o | o | - 
+AdColony|{{config.version.adcolony}}| o | o | o | o | -
+AppLovin|{{config.version.applovin}}| o | o | o | o | o
+Facebook|{{config.version.facebook}}| o | o | o | o | o
+maio    |{{config.version.maio}}| - | o | o | o | -
+MoPub   |{{config.version.mopub}}| o | o | o | o | o
+nend    |{{config.version.nend}}| o | o | o | o | - 
+TapJoy  |{{config.version.tapjoy}}| - | o | o | o | - 
+UnityAds|{{config.version.unityads}}| o | o | o | o | - 
 
 ## 追加実装
 
@@ -24,7 +24,7 @@ UnityAds|3.3.0| o | o | o | o | -
 AppDelegateなどで`initializeSdkWithConfiguration:`を呼び出してください。
 `MOPUB_AD_UNIT_ID`は営業担当よりおしらせします。
 
-```Objective-c tab= hl_lines="8 9 11"
+```Objective-c tab= hl_lines="1 2 3 4 5 6 7 10 12 13 14"
 #import "MoPub.h";
 …
 @implementation AppDelegate
@@ -38,11 +38,10 @@ AppDelegateなどで`initializeSdkWithConfiguration:`を呼び出してくださ
   [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig completion:nil];
   return YES;
 }
-
 @end
 ```
 
-```swift tab= hl_lines="7 8"
+```swift tab= hl_lines="1 2 3 4 5 6 9 10 11"
 import UIKit
 import MoPub
 

@@ -8,11 +8,11 @@ AdMob + APSをご利用される場合は[こちら](aps/init.md)をご覧くだ
 
 ## サンプルアプリ
 
-[こちら](https://dl.ad-stir.com/sample/AdstirAdsSdkiOS-2.14.2-SampleApp.zip)より、adstirSDKのサンプルプロジェクトをダウンロードすることができます。
+[こちら]({{config.sample_url}})より、adstirSDKのサンプルプロジェクトをダウンロードすることができます。
 
 ## お問い合わせ
 
 ご不明な点はお気軽に[お問い合わせ](https://ja.ad-stir.com/contact "お問い合わせ")ください。
 
+そして{{config.version.adcolony}}です。
 
-{{ config.extra.version }}

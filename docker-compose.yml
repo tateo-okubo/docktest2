@@ -1,0 +1,11 @@
+version: '2'
+services:
+  mkdocs:
+    image: squidfunk/mkdocs-material:4.6.0
+    container_name: mkdocs
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/docs
+      - ~/.ssh/config:/root/.ssh/config
+      - ~/.ssh/github_rsa:/root/.ssh/github_rsa
