@@ -23,7 +23,7 @@ jobs:
         run: |
           TAG_NAME="${GITHUB_REF##refs/tags/}"
           echo "::set-output name=tag_name::${TAG_NAME}"
-          echo "::set-output name=deploy_tag_name::deploy-${TAG_NAME}"
+          echo "::set-output name=deploy_tag_name::${TAG_NAME}"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v2
@@ -34,3 +34,4 @@ jobs:
         with:
           tagName: ${{ steps.prepare_tag.outputs.deploy_tag_name }}
           tagMessage: "Deployment ${{ steps.prepare_tag.outputs.tag_name }}"
+          tagOverwrite: true
