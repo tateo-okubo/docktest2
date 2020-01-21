@@ -25,6 +25,9 @@ jobs:
           echo "::set-output name=tag_name::${TAG_NAME}"
           echo "::set-output name=deploy_tag_name::${TAG_NAME}"
 
+      - name: cp .github folder
+        run: cp -r .github ./site
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v2
         env:
