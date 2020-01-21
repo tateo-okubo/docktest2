@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: build document
-      uses: actions/checkout@v1
       env:
         GITHUB_ACTIONS: true
       run: docker-compose up
