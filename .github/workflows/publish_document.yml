@@ -31,8 +31,8 @@ jobs:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./site
-          INPUT_KEEPFILES: true
         with:
           tagName: ${{ steps.prepare_tag.outputs.deploy_tag_name }}
           tagMessage: "Deployment ${{ steps.prepare_tag.outputs.tag_name }}"
           tagOverwrite: true
+          keepFiles: true
