@@ -2,8 +2,6 @@ name: build mkdocs and publish
 
 on:
   push:
-    branches:
-      - 'release/**'
     tags:
       - 'release-v**.**.**'
 
