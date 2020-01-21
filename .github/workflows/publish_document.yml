@@ -33,4 +33,4 @@ jobs:
           PUBLISH_DIR: ./site
         with:
           tagName: ${{ steps.prepare_tag.outputs.deploy_tag_name }}
-          tagMessage: 'Deployment ${{ steps.prepare_tag.outputs.tag_name }}'
+          tagMessage: "Deployment ${{ steps.prepare_tag.outputs.tag_name }}"
