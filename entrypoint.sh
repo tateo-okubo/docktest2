@@ -8,6 +8,6 @@ if [ "$GITHUB_ACTIONS" != "true" ]; then
 mkdocs serve --dev-addr=0.0.0.0:8000
 else
 mkdocs build
-# echo "copy .github"
-# cp -r .github /docs/site
+echo "copy .github"
+cp -r .github /docs/site
 fi
