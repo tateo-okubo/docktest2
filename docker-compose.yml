@@ -7,7 +7,7 @@ services:
       - "8000:8000"
     volumes:
       - ./:/docs
-    # command: sh pip install mkdocs-markdownextradata-plugin
-    # command: echo "test"
     tty: true
+    environment:
+      - GITHUB_ACTIONS=$GITHUB_ACTIONS
     entrypoint: /bin/sh /docs/entrypoint.sh
