@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - 'release/**'
+    tags:
+      - 'v**.**.**'
 
 jobs:
   build:
@@ -30,5 +32,5 @@ jobs:
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./site
         with:
-        tagName: ${{ steps.prepare_tag.outputs.deploy_tag_name }}
-        tagMessage: 'Deployment ${{ steps.prepare_tag.outputs.tag_name }}'
+          tagName: ${{ steps.prepare_tag.outputs.deploy_tag_name }}
+          tagMessage: 'Deployment ${{ steps.prepare_tag.outputs.tag_name }}'
