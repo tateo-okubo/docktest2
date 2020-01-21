@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@gh-pages
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -27,4 +29,3 @@ jobs:
             - Second Change
           draft: false
           prerelease: false
-          
