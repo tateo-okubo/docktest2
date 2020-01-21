@@ -3,12 +3,13 @@ name: build mkdocs and publish
 on:
   push:
     branches:
-    - "release/*"
+    - 'release/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v1
     - name: build document
       env:
         GITHUB_ACTIONS: true
