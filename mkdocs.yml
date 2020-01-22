@@ -16,8 +16,7 @@ theme:
 use_directory_urls: false
 
 extra:
-  search:
-    language: 'jp'
+  language: 'jp'
   config:
     version:
       adstir: 2.14.7
