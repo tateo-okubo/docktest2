@@ -2,6 +2,8 @@ name: build mkdocs and publish
 
 on:
   push:
+    branches: 
+      - master
     tags:
       - 'release-v**.**.**'
 
@@ -23,8 +25,9 @@ jobs:
           echo "::set-output name=tag_name::${TAG_NAME}"
           echo "::set-output name=deploy_tag_name::${TAG_NAME}"
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages with tag
         uses: peaceiris/actions-gh-pages@v2
+        if: startsWith(github.ref, 'refs/tags/')
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           PUBLISH_BRANCH: gh-pages
@@ -34,3 +37,11 @@ jobs:
           tagMessage: "Deployment ${{ steps.prepare_tag.outputs.tag_name }}"
           tagOverwrite: true
           keepFiles: true
+
+      - name: Deploy to GitHub Pages with push master 
+        uses: peaceiris/actions-gh-pages@v2
+        if: startsWith(github.ref, 'master')
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./site
