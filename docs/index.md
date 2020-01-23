@@ -15,3 +15,4 @@ AdMob + APSをご利用される場合は[こちら](aps/init.md)をご覧くだ
 ご不明な点はお気軽に[お問い合わせ](https://ja.ad-stir.com/contact "お問い合わせ")ください。
 
 マスターテスト です。
+aaaaa
