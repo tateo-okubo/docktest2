@@ -1,0 +1,1887 @@
+
+
+
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="クリップボードへコピー">
+      
+        <meta name="lang:clipboard.copied" content="コピーしました">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="何も見つかりませんでした">
+      
+        <meta name="lang:search.result.one" content="1件見つかりました">
+      
+        <meta name="lang:search.result.other" content="#件見つかりました">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>全画面インタースティシャル - adstir Integration Guide for iOS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="white">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#全画面インタースティシャル広告の導入" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+    <nav class="md-header-nav md-grid">
+      <div class="md-flex">
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <a href="../../index.html" title="adstir Integration Guide for iOS" aria-label="adstir Integration Guide for iOS" class="md-header-nav__button md-logo">
+            
+              <img alt="logo" src="../../images/adstir_icon.ico" width="24" height="24">
+            
+          </a>
+        </div>
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+        </div>
+        <div class="md-flex__cell md-flex__cell--stretch">
+          <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+  
+              adstir Integration Guide for iOS
+  
+          </div>
+        </div>
+        <div class="md-flex__cell md-flex__cell--shrink">
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            検索キーワードを入力してください
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../index.html" class="md-tabs__link">
+        スタートガイド
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../index.html" class="md-tabs__link md-tabs__link--active">
+          adstir
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../admob/index.html" class="md-tabs__link">
+          AdMob
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../aps/init.html" class="md-tabs__link">
+          APS
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../index.html" title="adstir Integration Guide for iOS" class="md-nav__button md-logo">
+      
+        <img src="../../images/adstir_icon.ico" width="48" height="48">
+      
+    </a>
+    adstir Integration Guide for iOS
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" title="スタートガイド" class="md-nav__link">
+      スタートガイド
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      adstir
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        adstir
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" title="はじめに" class="md-nav__link">
+      はじめに
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      初期設定
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        初期設定
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-1" type="checkbox" id="nav-2-2-1">
+    
+    <label class="md-nav__link" for="nav-2-2-1">
+      SDKの組み込み
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-1">
+        SDKの組み込み
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../init/cocoapods.html" title="CocoaPods" class="md-nav__link">
+      CocoaPods
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../init/manual_integration.html" title="手動組み込み" class="md-nav__link">
+      手動組み込み
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      対応ネットワーク
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        対応ネットワーク
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/index.html" title="対応ネットワーク一覧" class="md-nav__link">
+      対応ネットワーク一覧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/adcolony.html" title="AdColony" class="md-nav__link">
+      AdColony
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/adcorsa.html" title="AdCorsa" class="md-nav__link">
+      AdCorsa
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/applovin.html" title="AppLovin" class="md-nav__link">
+      AppLovin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/imobile.html" title="imobile" class="md-nav__link">
+      imobile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/maio.html" title="maio" class="md-nav__link">
+      maio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/mobvista.html" title="Mobvista" class="md-nav__link">
+      Mobvista
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/mopub.html" title="MoPub" class="md-nav__link">
+      MoPub
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/nend.html" title="nend" class="md-nav__link">
+      nend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/tapjoy.html" title="TapJoy" class="md-nav__link">
+      TapJoy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/tiktok.html" title="TikTok" class="md-nav__link">
+      TikTok
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/unityads.html" title="UnityAds" class="md-nav__link">
+      UnityAds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/zucks.html" title="Zucks" class="md-nav__link">
+      Zucks
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" checked>
+    
+    <label class="md-nav__link" for="nav-2-4">
+      広告の実装
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        広告の実装
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="banner.html" title="バナー" class="md-nav__link">
+      バナー
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="swipe.html" title="スワイプインタースティシャル" class="md-nav__link">
+      スワイプインタースティシャル
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-3" type="checkbox" id="nav-2-4-3">
+    
+    <label class="md-nav__link" for="nav-2-4-3">
+      ネイティブ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-3">
+        ネイティブ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="native/native_banner.html" title="ネイティブライクバナー" class="md-nav__link">
+      ネイティブライクバナー
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="native/custom.html" title="フルカスタマイズ" class="md-nav__link">
+      フルカスタマイズ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="native/native_video.html" title="ネイティブ動画" class="md-nav__link">
+      ネイティブ動画
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-4" type="checkbox" id="nav-2-4-4">
+    
+    <label class="md-nav__link" for="nav-2-4-4">
+      動画リワード
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-4">
+        動画リワード
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vr/index.html" title="実装" class="md-nav__link">
+      実装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vr/callback.html" title="リワードコールバック" class="md-nav__link">
+      リワードコールバック
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        全画面インタースティシャル
+      </label>
+    
+    <a href="interstitial.html" title="全画面インタースティシャル" class="md-nav__link md-nav__link--active">
+      全画面インタースティシャル
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-動画広告の初期化を行う" class="md-nav__link">
+    1. 動画広告の初期化を行う
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-全画面インタースティシャル広告のインスタンスを生成" class="md-nav__link">
+    2. 全画面インタースティシャル広告のインスタンスを生成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-デリゲートの実装オプション" class="md-nav__link">
+    3. デリゲートの実装(オプション)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-全画面インタースティシャル広告の読み込み" class="md-nav__link">
+    4. 全画面インタースティシャル広告の読み込み
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-全画面インタースティシャル広告の再生" class="md-nav__link">
+    5. 全画面インタースティシャル広告の再生
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sdkの実装例" class="md-nav__link">
+    SDKの実装例
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      APIリファレンス
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        APIリファレンス
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/index.html" title="一覧" class="md-nav__link">
+      一覧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-2" type="checkbox" id="nav-2-5-2">
+    
+    <label class="md-nav__link" for="nav-2-5-2">
+      バナー
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-5-2">
+        バナー
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/banner/AdstirMraidView-Class-Reference.html" title="AdstirMraidView" class="md-nav__link">
+      AdstirMraidView
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/banner/AdstirMraidViewDelegate-Protocol-Reference.html" title="AdstirMraidViewDelegate" class="md-nav__link">
+      AdstirMraidViewDelegate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-3" type="checkbox" id="nav-2-5-3">
+    
+    <label class="md-nav__link" for="nav-2-5-3">
+      スワイプインタースティシャル
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-5-3">
+        スワイプインタースティシャル
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/swipe/AdstirFullscreenView-Class-Reference.html" title="AdstirFullscreenView" class="md-nav__link">
+      AdstirFullscreenView
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-4" type="checkbox" id="nav-2-5-4">
+    
+    <label class="md-nav__link" for="nav-2-5-4">
+      ネイティブ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-5-4">
+        ネイティブ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/native/AdstirNativeAd-Class-Reference.html" title="AdstirNativeAd" class="md-nav__link">
+      AdstirNativeAd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/native/AdstirNativeAdDelegate-Protocol-Reference.html" title="AdstirNativeAdDelegate" class="md-nav__link">
+      AdstirNativeAdDelegate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/native/AdstirNativeAdResponse-Class-Reference.html" title="AdstirNativeAdResponse" class="md-nav__link">
+      AdstirNativeAdResponse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/native/AdstirLoadImageDeledate-Protocol-Reference.html" title="AdstirLoadImageDeledate" class="md-nav__link">
+      AdstirLoadImageDeledate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/native/AdstirLoadSmallImageDeledate-Protocol-Reference.html" title="AdstirLoadSmallImageDeledate" class="md-nav__link">
+      AdstirLoadSmallImageDeledate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-4-6" type="checkbox" id="nav-2-5-4-6">
+    
+    <label class="md-nav__link" for="nav-2-5-4-6">
+      ネイティブ動画
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-5-4-6">
+        ネイティブ動画
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/native/video/AdstirNativeVideoAd-Class-Reference.html" title="AdstirNativeVideoAd" class="md-nav__link">
+      AdstirNativeVideoAd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/native/video/AdstirNativeVideoView-Class-Reference.html" title="AdstirNativeVideoView" class="md-nav__link">
+      AdstirNativeVideoView
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/native/video/AdstirNativeVideoViewDelegate-Protocol-Reference.html" title="AdstirNativeVideoViewDelegate" class="md-nav__link">
+      AdstirNativeVideoViewDelegate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-5" type="checkbox" id="nav-2-5-5">
+    
+    <label class="md-nav__link" for="nav-2-5-5">
+      動画リワード/全画面インタースティシャルの初期化
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-5-5">
+        動画リワード/全画面インタースティシャルの初期化
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/AdstirVideoAds-Class-Reference.html" title="AdstirVideoAds" class="md-nav__link">
+      AdstirVideoAds
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-6" type="checkbox" id="nav-2-5-6">
+    
+    <label class="md-nav__link" for="nav-2-5-6">
+      動画リワード
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-5-6">
+        動画リワード
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/video/AdstirVideoReward-Class-Reference.html" title="AdstirVideoReward" class="md-nav__link">
+      AdstirVideoReward
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/video/AdstirVideoRewardDelegate-Protocol-Reference.html" title="AdstirVideoRewardDelegate" class="md-nav__link">
+      AdstirVideoRewardDelegate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-7" type="checkbox" id="nav-2-5-7">
+    
+    <label class="md-nav__link" for="nav-2-5-7">
+      全画面インタースティシャル
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-5-7">
+        全画面インタースティシャル
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/interstitial/AdstirInterstitial-Class-Reference.html" title="AdstirInterstitial" class="md-nav__link">
+      AdstirInterstitial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/interstitial/AdstirInterstitialDelegate-Protocol-Reference.html" title="AdstirInterstitialDelegate" class="md-nav__link">
+      AdstirInterstitialDelegate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+    
+    <label class="md-nav__link" for="nav-2-6">
+      その他
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-6">
+        その他
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../info/user_data.html" title="ユーザデータアクセス許可に関して" class="md-nav__link">
+      ユーザデータアクセス許可に関して
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../info/question.html" title="よくある質問" class="md-nav__link">
+      よくある質問
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      AdMob
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        AdMob
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admob/index.html" title="はじめに" class="md-nav__link">
+      はじめに
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admob/network.html" title="AdMobメディエーション" class="md-nav__link">
+      AdMobメディエーション
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admob/question.html" title="よくある質問" class="md-nav__link">
+      よくある質問
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      APS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        APS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aps/init.html" title="APSの初期設定" class="md-nav__link">
+      APSの初期設定
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aps/banner.html" title="AdMobバナー" class="md-nav__link">
+      AdMobバナー
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aps/interstitial.html" title="AdMobインタースティシャル" class="md-nav__link">
+      AdMobインタースティシャル
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../changelog.html" title="変更履歴" class="md-nav__link">
+      変更履歴
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-動画広告の初期化を行う" class="md-nav__link">
+    1. 動画広告の初期化を行う
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-全画面インタースティシャル広告のインスタンスを生成" class="md-nav__link">
+    2. 全画面インタースティシャル広告のインスタンスを生成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-デリゲートの実装オプション" class="md-nav__link">
+    3. デリゲートの実装(オプション)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-全画面インタースティシャル広告の読み込み" class="md-nav__link">
+    4. 全画面インタースティシャル広告の読み込み
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-全画面インタースティシャル広告の再生" class="md-nav__link">
+    5. 全画面インタースティシャル広告の再生
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sdkの実装例" class="md-nav__link">
+    SDKの実装例
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="全画面インタースティシャル広告の導入"><a class="toclink" href="#全画面インタースティシャル広告の導入">全画面インタースティシャル広告の導入</a><a class="headerlink" href="#全画面インタースティシャル広告の導入" title="Permanent link">&para;</a></h1>
+<p>動画 / 静止画 による全画面広告の導入方法です。</p>
+<h2 id="1-動画広告の初期化を行う"><a class="toclink" href="#1-動画広告の初期化を行う">1. 動画広告の初期化を行う</a><a class="headerlink" href="#1-動画広告の初期化を行う" title="Permanent link">&para;</a></h2>
+<p><code>AdstirVideoAds prepareWithMedia</code>を使い、プロジェクトで利用する全ての動画広告の初期化を同時に行います。</p>
+<div class="admonition notice">
+<p>動画リワード広告と全画面インタースティシャル広告併用する場合は、動画リワード広告と全画面インタースティシャル広告の広告枠全て同時に初期化を行う必要があります。</p>
+</div>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">Objctive-c</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">AdstirVideoAds</span> <span class="nl">prepareWithMedia</span><span class="p">:</span><span class="s">@&quot;メディアID&quot;</span> <span class="nl">spots</span><span class="p">:</span><span class="l">@[</span><span class="p">@</span><span class="err">枠</span><span class="n">No1</span><span class="p">,</span> <span class="p">@</span><span class="err">枠</span><span class="n">No2</span><span class="l">]</span><span class="p">];</span>
+</pre></div></div>
+<input name="__tabs_1" type="radio" id="__tab_1_1" />
+<label for="__tab_1_1">swift</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="n">AdstirVideoAds</span><span class="p">.</span><span class="n">prepare</span><span class="p">(</span><span class="n">withMedia</span><span class="p">:</span> <span class="s">&quot;メディアID&quot;</span><span class="p">,</span> <span class="n">spots</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]);</span>
+</pre></div></div>
+</div>
+<h2 id="2-全画面インタースティシャル広告のインスタンスを生成"><a class="toclink" href="#2-全画面インタースティシャル広告のインスタンスを生成">2. 全画面インタースティシャル広告のインスタンスを生成</a><a class="headerlink" href="#2-全画面インタースティシャル広告のインスタンスを生成" title="Permanent link">&para;</a></h2>
+<p><code>AdstirInterstitial</code>のインスタンスを生成します。</p>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">Objctive-c</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="n">AdstirInterstitial</span> <span class="o">*</span><span class="n">interstitial</span> <span class="o">=</span> <span class="p">[[</span><span class="n">AdstirInterstitial</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithMedia</span><span class="p">:</span><span class="s">@&quot;メディアID&quot;</span> <span class="nl">spot</span><span class="p">:</span><span class="err">枠</span><span class="n">No</span><span class="p">];</span>
+</pre></div></div>
+<input name="__tabs_2" type="radio" id="__tab_2_1" />
+<label for="__tab_2_1">swift</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">interstitial</span> <span class="p">=</span> <span class="n">AdstirInterstitial</span><span class="p">(</span><span class="n">media</span><span class="p">:</span> <span class="s">&quot;メディアID&quot;</span><span class="p">,</span> <span class="n">spot</span><span class="p">:</span> <span class="err">枠</span><span class="n">No</span><span class="p">)</span><span class="o">!</span>
+</pre></div></div>
+</div>
+<h2 id="3-デリゲートの実装オプション"><a class="toclink" href="#3-デリゲートの実装オプション">3. デリゲートの実装(オプション)</a><a class="headerlink" href="#3-デリゲートの実装オプション" title="Permanent link">&para;</a></h2>
+<div class="superfences-tabs">
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">Objctive-c</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span> <span class="p">{</span>
+    <span class="p">[</span><span class="nb">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+        <span class="o">:</span>
+    <span class="n">interstitial</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span>
+        <span class="o">:</span>
+<span class="p">}</span>
+
+<span class="cm">/** インタースティシャル広告の準備が完了した際に呼び出されます */</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adstirInterstitialDidLoad:</span><span class="p">(</span><span class="n">AdstirInterstitial</span> <span class="o">*</span> <span class="n">__asadnonnull</span><span class="p">)</span><span class="nv">interstitial</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="cm">/** インタースティシャル広告の準備に失敗した際に呼び出されます */</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adstirInterstitial:</span><span class="p">(</span><span class="n">AdstirInterstitial</span> <span class="o">*</span> <span class="n">__asadnonnull</span><span class="p">)</span><span class="nv">interstitial</span> <span class="nf">didFailToLoadWithError:</span><span class="p">(</span><span class="bp">NSError</span> <span class="o">*</span> <span class="n">__asadnonnull</span><span class="p">)</span><span class="nv">error</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="cm">/** インタースティシャル広告が表示された際に呼び出されます */</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adstirInterstitialDidShow:</span><span class="p">(</span><span class="n">AdstirInterstitial</span> <span class="o">*</span> <span class="n">__asadnonnull</span><span class="p">)</span><span class="nv">interstitial</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="cm">/** インタースティシャル広告の表示に失敗した際に呼び出されます */</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adstirInterstitial:</span><span class="p">(</span><span class="n">AdstirInterstitial</span> <span class="o">*</span> <span class="n">__asadnonnull</span><span class="p">)</span><span class="nv">interstitial</span> <span class="nf">didFailToShowWithError:</span><span class="p">(</span><span class="bp">NSError</span> <span class="o">*</span> <span class="n">__asadnonnull</span><span class="p">)</span><span class="nv">error</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="cm">/** インタースティシャル広告が閉じられたときに呼び出されます */</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adstirInterstitialDidClose:</span><span class="p">(</span><span class="n">AdstirInterstitial</span> <span class="o">*</span> <span class="n">__asadnonnull</span><span class="p">)</span><span class="nv">interstitial</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div></div>
+<input name="__tabs_3" type="radio" id="__tab_3_1" />
+<label for="__tab_3_1">swift</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+    <span class="p">...</span>
+    <span class="n">interstitial</span><span class="p">?.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/** インタースティシャル広告の準備が完了した際に呼び出されます */</span>
+<span class="kd">func</span> <span class="nf">adstirInterstitialDidLoad</span><span class="p">(</span><span class="kc">_</span> <span class="n">interstitial</span><span class="p">:</span> <span class="n">AdstirInterstitial</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+<span class="cm">/** インタースティシャル広告の準備に失敗した際に呼び出されます */</span>
+<span class="kd">func</span> <span class="nf">adstirInterstitial</span><span class="p">(</span><span class="kc">_</span> <span class="n">interstitial</span><span class="p">:</span> <span class="n">AdstirInterstitial</span><span class="p">,</span> <span class="n">didFailToLoadWithError</span> <span class="n">error</span><span class="p">:</span> <span class="bp">NSError</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+<span class="cm">/** インタースティシャル広告が表示された際に呼び出されます */</span>
+<span class="kd">func</span> <span class="nf">adstirInterstitialDidShow</span><span class="p">(</span><span class="kc">_</span> <span class="n">interstitial</span><span class="p">:</span> <span class="n">AdstirInterstitial</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+<span class="cm">/** インタースティシャル広告の表示に失敗した際に呼び出されます */</span>
+<span class="kd">func</span> <span class="nf">adstirInterstitial</span><span class="p">(</span><span class="kc">_</span> <span class="n">interstitial</span><span class="p">:</span> <span class="n">AdstirInterstitial</span><span class="p">,</span> <span class="n">didFailToShowWithError</span> <span class="n">error</span><span class="p">:</span> <span class="bp">NSError</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+<span class="cm">/** インタースティシャル広告が閉じられたときに呼び出されます */</span>
+<span class="kd">func</span> <span class="nf">adstirInterstitialDidClose</span><span class="p">(</span><span class="kc">_</span> <span class="n">interstitial</span><span class="p">:</span> <span class="n">AdstirInterstitial</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+</pre></div></div>
+</div>
+<h2 id="4-全画面インタースティシャル広告の読み込み"><a class="toclink" href="#4-全画面インタースティシャル広告の読み込み">4. 全画面インタースティシャル広告の読み込み</a><a class="headerlink" href="#4-全画面インタースティシャル広告の読み込み" title="Permanent link">&para;</a></h2>
+<p>全画面インタースティシャル広告の読み込みを行います。</p>
+<div class="superfences-tabs">
+<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">Objective-c</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">interstitial</span> <span class="n">load</span><span class="p">];</span>
+</pre></div></div>
+<input name="__tabs_4" type="radio" id="__tab_4_1" />
+<label for="__tab_4_1">swift</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="n">interstitial</span><span class="p">.</span><span class="n">load</span><span class="p">()</span>
+</pre></div></div>
+</div>
+<h2 id="5-全画面インタースティシャル広告の再生"><a class="toclink" href="#5-全画面インタースティシャル広告の再生">5. 全画面インタースティシャル広告の再生</a><a class="headerlink" href="#5-全画面インタースティシャル広告の再生" title="Permanent link">&para;</a></h2>
+<p>読み込みが完了した全画面インタースティシャル広告を再生します。
+動画の再生を行うViewControllerを渡してください。
+動画の再生後、もう一度動画を再生するためには<a href="#4-全画面インタースティシャル広告の読み込み"><code>4.全画面インタースティシャル広告の読み込み</code></a>を行う必要があります。</p>
+<div class="superfences-tabs">
+<input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
+<label for="__tab_5_0">Objective-c</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">interstitial</span><span class="p">.</span><span class="n">canShow</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">interstitial</span> <span class="nl">showFromViewController</span><span class="p">:</span><span class="nb">self</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div></div>
+<input name="__tabs_5" type="radio" id="__tab_5_1" />
+<label for="__tab_5_1">swift</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">interstitial</span><span class="p">.</span><span class="n">canShow</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">interstitial</span><span class="p">.</span><span class="n">show</span><span class="p">(</span><span class="n">from</span><span class="p">:</span> <span class="kc">self</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div></div>
+</div>
+<h2 id="sdkの実装例"><a class="toclink" href="#sdkの実装例">SDKの実装例</a><a class="headerlink" href="#sdkの実装例" title="Permanent link">&para;</a></h2>
+<p>ここでは、単純な実装についてのサンプルを提示します。
+まず、Storyboard上に、<code>UIButton</code>と<code>UILabel</code>を配置し、<code>UIButton</code>をのOutletとActionを<code>showInterstitialButton</code>と<code>showInterstitialButtonDidTouchUpInside</code>にそれぞれ接続し、<code>UILabel</code>のOutletを<code>statusLabel</code>に接続してください。</p>
+<ul>
+<li>AppDelegate</li>
+</ul>
+<div class="superfences-tabs">
+<input name="__tabs_6" type="radio" id="__tab_6_0" checked="checked" />
+<label for="__tab_6_0">Objective-c</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="c1">// ...</span>
+<span class="k">@import</span> <span class="n">AdstirAds</span><span class="p">;</span>
+<span class="c1">// ...</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">didFinishLaunchingWithOptions:</span><span class="p">(</span><span class="bp">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">launchOptions</span>
+<span class="p">{</span>
+    <span class="cm">/* 他の初期化コード */</span>
+
+    <span class="c1">// メディアIDと、このアプリ内で利用する動画インセンティブメニューの枠IDとインタースティシャル広告の枠IDをすべて指定します。</span>
+    <span class="c1">// 動画リワードとインタースティシャルを併用する場合はどちらの枠Noも指定してください。</span>
+    <span class="p">[</span><span class="n">AdstirVideoAds</span> <span class="nl">prepareWithMedia</span><span class="p">:</span><span class="s">@&quot;メディアID&quot;</span> <span class="nl">spots</span><span class="p">:</span><span class="l">@[</span><span class="p">@</span><span class="err">枠</span><span class="n">No</span><span class="l">]</span><span class="p">];</span>
+
+    <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></div>
+<input name="__tabs_6" type="radio" id="__tab_6_1" />
+<label for="__tab_6_1">swift</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="c1">// ...</span>
+<span class="kd">import</span> <span class="nc">AdstirAds</span>
+<span class="c1">// ...</span>
+<span class="kd">class</span> <span class="nc">AppDelegate</span><span class="p">:</span> <span class="bp">UIResponder</span><span class="p">,</span> <span class="bp">UIApplicationDelegate</span> <span class="p">{</span>
+<span class="c1">// ...</span>
+   <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="n">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="bp">NSObject</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+        <span class="cm">/* 他の初期化コード */</span>
+
+        <span class="c1">// メディアIDと、このアプリ内で利用するイン対すティシャル広告のメディアIDと、枠Noをすべて指定します。</span>
+        <span class="n">AdstirVideoAds</span><span class="p">.</span><span class="n">prepare</span><span class="p">(</span><span class="n">withMedia</span><span class="p">:</span><span class="s">&quot;メディアID&quot;</span><span class="p">,</span> <span class="n">spots</span><span class="p">:</span> <span class="p">[</span><span class="err">枠</span><span class="n">No</span><span class="p">,</span> <span class="err">枠</span><span class="n">No</span><span class="p">])</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+<span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div></div>
+</div>
+<ul>
+<li>ViewController</li>
+</ul>
+<div class="superfences-tabs">
+<input name="__tabs_7" type="radio" id="__tab_7_0" checked="checked" />
+<label for="__tab_7_0">Objective-c</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="c1">// ...</span>
+<span class="k">@import</span> <span class="n">AdstirAds</span><span class="p">;</span>
+<span class="c1">// ...</span>
+<span class="k">@interface</span> <span class="nc">ViewController</span> <span class="p">()</span> <span class="o">&lt;</span><span class="n">AdstirInterstitialDelegate</span><span class="o">&gt;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="k">weak</span><span class="p">,</span> <span class="k">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="bp">UIButton</span> <span class="o">*</span><span class="n">showInterstitialButton</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="k">weak</span><span class="p">,</span> <span class="k">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="bp">UILabel</span> <span class="o">*</span><span class="n">statusLabel</span><span class="p">;</span>
+
+<span class="k">@property</span> <span class="p">(</span><span class="k">strong</span><span class="p">,</span> <span class="k">nonatomic</span><span class="p">)</span> <span class="n">AdstirInterstitial</span> <span class="o">*</span><span class="n">interstitial</span><span class="p">;</span>
+
+<span class="k">@end</span>
+
+<span class="k">@implementation</span> <span class="nc">ViewController</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span> <span class="p">{</span>
+    <span class="p">[</span><span class="nb">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+    <span class="c1">// Do any additional setup after loading the view, typically from a nib.</span>
+
+    <span class="n">AdstirInterstitial</span> <span class="o">*</span><span class="n">interstitial</span> <span class="o">=</span> <span class="p">[[</span><span class="n">AdstirInterstitial</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithMedia</span><span class="p">:</span><span class="s">@&quot;メディアID&quot;</span> <span class="nl">spot</span><span class="p">:</span><span class="err">枠</span><span class="n">No</span><span class="p">];</span>
+    <span class="n">interstitial</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span>
+    <span class="nb">self</span><span class="p">.</span><span class="n">interstitial</span> <span class="o">=</span> <span class="n">interstitial</span><span class="p">;</span>
+
+    <span class="nb">self</span><span class="p">.</span><span class="n">statusLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">@&quot;Loading...&quot;</span><span class="p">;</span>
+    <span class="p">[</span><span class="n">interstitial</span> <span class="n">load</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didReceiveMemoryWarning</span> <span class="p">{</span>
+    <span class="p">[</span><span class="nb">super</span> <span class="n">didReceiveMemoryWarning</span><span class="p">];</span>
+    <span class="c1">// Dispose of any resources that can be recreated.</span>
+<span class="p">}</span>
+
+<span class="cm">/** 全画面インタースティシャル広告を表示するボタンのターゲットメソッド */</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">showInterstitialButtonDidTouchUpInside:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span> <span class="p">{</span>
+    <span class="nb">self</span><span class="p">.</span><span class="n">showInterstitialButton</span><span class="p">.</span><span class="n">enabled</span> <span class="o">=</span> <span class="nb">NO</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">interstitial</span><span class="p">.</span><span class="n">canShow</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">interstitial</span> <span class="nl">showFromViewController</span><span class="p">:</span><span class="nb">self</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> Called when get ready to show ad</span>
+
+<span class="cm"> インタースティシャル広告の準備が完了した際に呼び出されます</span>
+<span class="cm"> */</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adstirInterstitialDidLoad:</span><span class="p">(</span><span class="n">AdstirInterstitial</span> <span class="o">*</span> <span class="n">__asadnonnull</span><span class="p">)</span><span class="nv">interstitial</span>
+<span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;広告の読み込みが完了しました&quot;</span><span class="p">);</span>
+
+    <span class="nb">self</span><span class="p">.</span><span class="n">statusLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">@&quot;Loaded&quot;</span><span class="p">;</span>
+    <span class="nb">self</span><span class="p">.</span><span class="n">showInterstitialButton</span><span class="p">.</span><span class="n">enabled</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> Called when failed to load ad</span>
+
+<span class="cm"> インタースティシャル広告の準備に失敗した際に呼び出されます</span>
+<span class="cm"> */</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adstirInterstitial:</span><span class="p">(</span><span class="n">AdstirInterstitial</span> <span class="o">*</span> <span class="n">__asadnonnull</span><span class="p">)</span><span class="nv">interstitial</span> <span class="nf">didFailToLoadWithError:</span><span class="p">(</span><span class="bp">NSError</span> <span class="o">*</span> <span class="n">__asadnonnull</span><span class="p">)</span><span class="nv">error</span>
+<span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;広告の読み込みに失敗しました&quot;</span><span class="p">);</span>
+
+    <span class="c1">// 15秒待ってから再読み込みします</span>
+    <span class="n">dispatch_after</span><span class="p">(</span><span class="n">dispatch_time</span><span class="p">(</span><span class="n">DISPATCH_TIME_NOW</span><span class="p">,</span> <span class="p">(</span><span class="kt">int64_t</span><span class="p">)(</span><span class="mf">15.0f</span> <span class="o">*</span> <span class="n">NSEC_PER_SEC</span><span class="p">)),</span> <span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">statusLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">@&quot;Loading...&quot;</span><span class="p">;</span>
+        <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">interstitial</span> <span class="n">load</span><span class="p">];</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> Called when interstitial ad is shown</span>
+
+<span class="cm"> インタースティシャル広告が表示された際に呼び出されます</span>
+<span class="cm"> */</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adstirInterstitialDidShow:</span><span class="p">(</span><span class="n">AdstirInterstitial</span> <span class="o">*</span> <span class="n">__asadnonnull</span><span class="p">)</span><span class="nv">interstitial</span>
+<span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;広告が表示されました&quot;</span><span class="p">);</span>
+
+    <span class="nb">self</span><span class="p">.</span><span class="n">statusLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">@&quot;&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> Called when failed to show ad</span>
+
+<span class="cm"> インタースティシャル広告の表示に失敗した際に呼び出されます</span>
+<span class="cm"> */</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adstirInterstitial:</span><span class="p">(</span><span class="n">AdstirInterstitial</span> <span class="o">*</span> <span class="n">__asadnonnull</span><span class="p">)</span><span class="nv">interstitial</span> <span class="nf">didFailToShowWithError:</span><span class="p">(</span><span class="bp">NSError</span> <span class="o">*</span> <span class="n">__asadnonnull</span><span class="p">)</span><span class="nv">error</span>
+<span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;広告の表示に失敗しました&quot;</span><span class="p">);</span>
+
+    <span class="c1">// 15秒待ってから再読み込みします</span>
+    <span class="n">dispatch_after</span><span class="p">(</span><span class="n">dispatch_time</span><span class="p">(</span><span class="n">DISPATCH_TIME_NOW</span><span class="p">,</span> <span class="p">(</span><span class="kt">int64_t</span><span class="p">)(</span><span class="mf">15.0f</span> <span class="o">*</span> <span class="n">NSEC_PER_SEC</span><span class="p">)),</span> <span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">statusLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">@&quot;Loading...&quot;</span><span class="p">;</span>
+        <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">interstitial</span> <span class="n">load</span><span class="p">];</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> Called when ad was closed</span>
+
+<span class="cm"> インタースティシャル広告が閉じられたときに呼び出されます</span>
+<span class="cm"> */</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adstirInterstitialDidClose:</span><span class="p">(</span><span class="n">AdstirInterstitial</span> <span class="o">*</span> <span class="n">__asadnonnull</span><span class="p">)</span><span class="nv">interstitial</span>
+<span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;広告が閉じられました&quot;</span><span class="p">);</span>
+
+    <span class="c1">// 15秒待ってから再読み込みします</span>
+    <span class="n">dispatch_after</span><span class="p">(</span><span class="n">dispatch_time</span><span class="p">(</span><span class="n">DISPATCH_TIME_NOW</span><span class="p">,</span> <span class="p">(</span><span class="kt">int64_t</span><span class="p">)(</span><span class="mf">15.0f</span> <span class="o">*</span> <span class="n">NSEC_PER_SEC</span><span class="p">)),</span> <span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">statusLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">@&quot;Loading...&quot;</span><span class="p">;</span>
+        <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">interstitial</span> <span class="n">load</span><span class="p">];</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">dealloc</span>
+<span class="p">{</span>
+    <span class="c1">// デリゲートを解放します。解放を忘れるとクラッシュする可能性があります。</span>
+    <span class="nb">self</span><span class="p">.</span><span class="n">interstitial</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+    <span class="c1">// 広告の制御インスタンスを解放します。</span>
+    <span class="nb">self</span><span class="p">.</span><span class="n">interstitial</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@end</span>
+</pre></div></div>
+<input name="__tabs_7" type="radio" id="__tab_7_1" />
+<label for="__tab_7_1">swift</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="kd">import</span> <span class="nc">UIKit</span>
+<span class="kd">import</span> <span class="nc">AdstirAds</span>
+
+<span class="kd">class</span> <span class="nc">ViewController</span><span class="p">:</span> <span class="bp">UIViewController</span><span class="p">,</span> <span class="n">AdstirInterstitialDelegate</span> <span class="p">{</span>
+
+    <span class="kr">@IBOutlet</span> <span class="kr">weak</span> <span class="kd">var</span> <span class="nv">showInterstitialButton</span><span class="p">:</span> <span class="bp">UIButton</span><span class="p">!</span>
+    <span class="kr">@IBOutlet</span> <span class="kr">weak</span> <span class="kd">var</span> <span class="nv">statusLabel</span><span class="p">:</span> <span class="bp">UILabel</span><span class="p">!</span>
+
+    <span class="kd">var</span> <span class="nv">interstitial</span><span class="p">:</span> <span class="n">AdstirInterstitial</span><span class="p">?</span>
+
+    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+        <span class="c1">// Do any additional setup after loading the view, typically from a nib.</span>
+
+        <span class="kc">self</span><span class="p">.</span><span class="n">showInterstitialButton</span><span class="p">.</span><span class="n">enabled</span> <span class="p">=</span> <span class="kc">false</span>
+
+        <span class="c1">// メディアIDと、このアプリ内で利用する動画インセンティブメニューの枠IDとインタースティシャル広告の枠IDをすべて指定します。</span>
+        <span class="c1">// 動画リワードとインタースティシャルを併用する場合はどちらの枠Noも指定してください。</span>
+        <span class="kd">let</span> <span class="nv">interstitial</span> <span class="p">=</span> <span class="n">AdstirInterstitial</span><span class="p">(</span><span class="n">media</span><span class="p">:</span> <span class="s">&quot;メディアID&quot;</span><span class="p">,</span> <span class="n">spot</span><span class="p">:</span> <span class="err">枠</span><span class="n">No</span><span class="p">)</span>
+        <span class="n">interstitial</span><span class="p">?.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span><span class="p">;</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">interstitial</span> <span class="p">=</span> <span class="n">interstitial</span>
+
+        <span class="kc">self</span><span class="p">.</span><span class="n">statusLabel</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="s">&quot;Loading...&quot;</span><span class="p">;</span>
+        <span class="n">interstitial</span><span class="p">?.</span><span class="n">load</span><span class="p">()</span>
+    <span class="p">}</span>
+
+    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">didReceiveMemoryWarning</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">super</span><span class="p">.</span><span class="n">didReceiveMemoryWarning</span><span class="p">()</span>
+        <span class="c1">// Dispose of any resources that can be recreated.</span>
+    <span class="p">}</span>
+
+    <span class="kr">@IBAction</span> <span class="kd">func</span> <span class="nf">showInterstitialButtonDidTouchUpInside</span><span class="p">(</span><span class="n">sender</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">showInterstitialButton</span><span class="p">.</span><span class="n">enabled</span> <span class="p">=</span> <span class="kc">false</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">interstitial</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="o">&amp;&amp;</span> <span class="kc">self</span><span class="p">.</span><span class="n">interstitial</span><span class="p">!.</span><span class="n">canShow</span><span class="p">())</span> <span class="p">{</span>
+            <span class="kc">self</span><span class="p">.</span><span class="n">interstitial</span><span class="p">?.</span><span class="n">showFromViewController</span><span class="p">(</span><span class="kc">self</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     Called when get ready to show ad</span>
+
+<span class="cm">     インタースティシャル広告の準備が完了した際に呼び出されます</span>
+<span class="cm">     */</span>
+    <span class="kd">func</span> <span class="nf">adstirInterstitialDidLoad</span><span class="p">(</span><span class="kc">_</span> <span class="n">interstitial</span><span class="p">:</span> <span class="n">AdstirInterstitial</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">&quot;広告の読み込みが完了しました&quot;</span><span class="p">)</span>
+
+        <span class="kc">self</span><span class="p">.</span><span class="n">statusLabel</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="s">&quot;Loaded&quot;</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">showInterstitialButton</span><span class="p">.</span><span class="n">enabled</span> <span class="p">=</span> <span class="kc">true</span>
+    <span class="p">}</span>
+    <span class="cm">/**</span>
+<span class="cm">     Called when failed to load ad</span>
+
+<span class="cm">     インタースティシャル広告の準備に失敗した際に呼び出されます</span>
+<span class="cm">     */</span>
+    <span class="kd">func</span> <span class="nf">adstirInterstitial</span><span class="p">(</span><span class="kc">_</span> <span class="n">interstitial</span><span class="p">:</span> <span class="n">AdstirInterstitial</span><span class="p">,</span> <span class="n">didFailToLoadWithError</span> <span class="n">error</span><span class="p">:</span> <span class="bp">NSError</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">&quot;広告の読み込みに失敗しました&quot;</span><span class="p">)</span>
+
+        <span class="c1">// 15秒待ってから再読み込みします</span>
+        <span class="n">dispatch_after</span><span class="p">(</span><span class="n">dispatch_time</span><span class="p">(</span><span class="n">DISPATCH_TIME_NOW</span><span class="p">,</span> <span class="p">(</span><span class="nb">Int64</span><span class="p">)(</span><span class="mf">15.0</span> <span class="o">*</span> <span class="nb">Double</span><span class="p">(</span><span class="n">NSEC_PER_SEC</span><span class="p">))),</span> <span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="p">{</span>
+            <span class="kc">self</span><span class="p">.</span><span class="n">statusLabel</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="s">&quot;Loading...&quot;</span><span class="p">;</span>
+            <span class="kc">self</span><span class="p">.</span><span class="n">interstitial</span><span class="p">?.</span><span class="n">load</span><span class="p">()</span>
+        <span class="p">})</span>
+    <span class="p">}</span>
+    <span class="cm">/**</span>
+<span class="cm">     Called when interstitial ad is shown</span>
+
+<span class="cm">     インタースティシャル広告が表示された際に呼び出されます</span>
+<span class="cm">     */</span>
+    <span class="kd">func</span> <span class="nf">adstirInterstitialDidShow</span><span class="p">(</span><span class="kc">_</span> <span class="n">interstitial</span><span class="p">:</span> <span class="n">AdstirInterstitial</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">&quot;広告が表示されました&quot;</span><span class="p">)</span>
+
+        <span class="kc">self</span><span class="p">.</span><span class="n">statusLabel</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="s">&quot;&quot;</span>
+    <span class="p">}</span>
+    <span class="cm">/**</span>
+<span class="cm">     Called when failed to show ad</span>
+
+<span class="cm">     インタースティシャル広告の表示に失敗した際に呼び出されます</span>
+<span class="cm">     */</span>
+    <span class="kd">func</span> <span class="nf">adstirInterstitial</span><span class="p">(</span><span class="kc">_</span> <span class="n">interstitial</span><span class="p">:</span> <span class="n">AdstirInterstitial</span><span class="p">,</span> <span class="n">didFailToShowWithError</span> <span class="n">error</span><span class="p">:</span> <span class="bp">NSError</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">&quot;広告の表示に失敗しました&quot;</span><span class="p">)</span>
+
+        <span class="c1">// 15秒待ってから再読み込みします</span>
+        <span class="n">dispatch_after</span><span class="p">(</span><span class="n">dispatch_time</span><span class="p">(</span><span class="n">DISPATCH_TIME_NOW</span><span class="p">,</span> <span class="p">(</span><span class="nb">Int64</span><span class="p">)(</span><span class="mf">15.0</span> <span class="o">*</span> <span class="nb">Double</span><span class="p">(</span><span class="n">NSEC_PER_SEC</span><span class="p">))),</span> <span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="p">{</span>
+            <span class="kc">self</span><span class="p">.</span><span class="n">statusLabel</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="s">&quot;Loading...&quot;</span><span class="p">;</span>
+            <span class="kc">self</span><span class="p">.</span><span class="n">interstitial</span><span class="p">?.</span><span class="n">load</span><span class="p">()</span>
+        <span class="p">})</span>
+    <span class="p">}</span>
+    <span class="cm">/**</span>
+<span class="cm">     Called when ad was closed</span>
+
+<span class="cm">     インタースティシャル広告が閉じられたときに呼び出されます</span>
+<span class="cm">     */</span>
+    <span class="kd">func</span> <span class="nf">adstirInterstitialDidClose</span><span class="p">(</span><span class="kc">_</span> <span class="n">interstitial</span><span class="p">:</span> <span class="n">AdstirInterstitial</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">&quot;広告が閉じられました&quot;</span><span class="p">)</span>
+
+        <span class="c1">// 15秒待ってから再読み込みします</span>
+        <span class="n">dispatch_after</span><span class="p">(</span><span class="n">dispatch_time</span><span class="p">(</span><span class="n">DISPATCH_TIME_NOW</span><span class="p">,</span> <span class="p">(</span><span class="nb">Int64</span><span class="p">)(</span><span class="mf">15.0</span> <span class="o">*</span> <span class="nb">Double</span><span class="p">(</span><span class="n">NSEC_PER_SEC</span><span class="p">))),</span> <span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="p">{</span>
+            <span class="kc">self</span><span class="p">.</span><span class="n">statusLabel</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="s">&quot;Loading...&quot;</span><span class="p">;</span>
+            <span class="kc">self</span><span class="p">.</span><span class="n">interstitial</span><span class="p">?.</span><span class="n">load</span><span class="p">()</span>
+        <span class="p">})</span>
+    <span class="p">}</span>
+
+    <span class="kd">deinit</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">interstitial</span><span class="p">?.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">nil</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">interstitial</span> <span class="p">=</span> <span class="kc">nil</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div></div>
+</div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+  <footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          
+          powered by
+          <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+          and
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs</a>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
